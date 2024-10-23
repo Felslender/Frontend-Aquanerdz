@@ -1,0 +1,91 @@
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .left{
+    height: 100vh;
+    width: 7vw;
+    background-image: url("../../../assets/trians-white.svg");
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-color: var(--secondary-color);
+  }
+
+  .right{
+    display: flex;
+    justify-content: space-between;
+    width: 93vw;
+    height: 100vh;
+    background-color: var(--white);
+
+    .back{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      .conj-vlt{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 7vw;
+        padding: .5rem 0 0 .5rem;
+        transition: 0.3s ease;
+
+        .txt-back{
+          font-size: 2.5vh;
+          font-weight: 600;
+        }
+      }
+
+      .conj-vlt:hover{
+        cursor: pointer;
+      }
+
+      .conj-vlt:active{
+        transform: scale(1.05);
+      }
+    }
+
+    .center{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+      .contents-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 12vh;
+
+        .title{
+          font-size: 5vh;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        .inserts{
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1rem;
+        }
+
+        .entry{
+          width: -webkit-fill-available;
+          padding: .75rem 0;
+          border-radius: .5rem;
+          background-color: var(--primary-color);
+          box-shadow: 3px 4px 4px 0 #00000025;
+          margin-top: 5%;
+        }
+
+        .contact{
+          font-family: var(--second-font);
+        }
+      }
+    }
+  }
+}

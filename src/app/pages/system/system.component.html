@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+<div class="content">
+  <div class="ttl">
+    <h2 class="system-name">{{sistema.nome_sistema}}</h2>
+    <button class="back" (click)="voltar()">
+      <img src="../../../assets/return.svg" alt="voltar-botao" />
+      Voltar
+    </button>
+  </div>
+  <div class="center">
+    <div class="infos">
+      <div class="alimentacao">
+        <p class="title-card">Alimentação</p>
+        <div class="card-alim">
+          <div class="hours">
+            <p class="realizada">Realizada</p>
+            <h5 class="hr">13:00</h5>
+          </div>
+          <div class="hours">
+            <p class="realizada">Próxima prevista</p>
+            <h5 class="hr">21:00</h5>
+          </div>
+        </div>
+      </div>
+      <div class="alimentacao fishes">
+        <div class="top-card-fishes">
+          <p class="title-card">Peixes do sistema</p>
+          <img class="editar" src="../../../assets/edit-pen.svg" alt="editar" />
+        </div>
+        <div class="card-alim">
+          <div class="hours">
+            <p class="realizada">Espécie</p>
+            <h5 class="hr">{{sistema.id_peixe}}</h5>
+          </div>
+          <div class="hours">
+            <p class="realizada">Quantidade</p>
+            <h5 class="hr">{{sistema.qto_peixe}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="meds">
+      <p class="title-card-ox">Medição</p>
+      <app-oxigen *ngIf="currentComponent === 'oxigen'"></app-oxigen>
+      <app-temperature *ngIf="currentComponent === 'temperature'"></app-temperature>
+      <div class="options-ox">
+        <button class="select" (click)="showNextComponent()">
+          <img
+            src="../../../assets/arrow-black-left.svg"
+            alt="ver parametro seguinte"
+          />
+        </button>
+        <button class="select" (click)="showPreviousComponent()">
+          <img
+            src="../../../assets/arrow-black-right.svg"
+            alt="ver parametro anterior"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="slogan">
+      <img
+        class="simbolo-an"
+        src="../../../assets/gota.svg"
+        alt="slogan gota"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="content">
+  <div class="right">
+    <div class="back">
+      <div class="conj-vlt" routerLink="/landing">
+        <img
+          class="vetor-back"
+          src="../../../assets/corner-down-left.svg"
+          alt="botao voltar"
+        />
+        <p class="txt-back">Voltar</p>
+      </div>
+    </div>
+    <div class="center">
+      <div class="contents-center">
+        <h2 class="title">Boas Vindas</h2>
+        <form (ngSubmit)="loginUser()" [formGroup]="form" #formDir="ngForm">
+          <div class="inserts">
+            <label>E-mail</label>
+            <input
+              type="text"
+              placeholder="example@exam.com"
+              formControlName="email"
+              required
+            />
+          </div>
+          <div class="inserts">
+            <label>Senha</label>
+            <input
+              type="password"
+              placeholder="Insira sua senha"
+              formControlName="senha"
+              required
+            />
+          </div>
+          <button class="entry">Entrar</button>
+        </form>
+        <!-- <p class="forgot">Esqueci minha senha</p> -->
+        <span class="contact">Entre em contato conosco (14)99xxxxxxxx</span>
+      </div>
+    </div>
+    <div class="man">
+      <img src="../../../assets/carinha-login.svg" alt="Homem feliz" />
+    </div>
+  </div>
+  <div class="left"></div>
+</div>

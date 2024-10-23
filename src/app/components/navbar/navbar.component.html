@@ -1,0 +1,28 @@
+<div *ngIf="isOnLoginOrRegisterPage()" class="top">
+  <h2 class="welcome">Boas Vindas</h2>
+  <img src="../../../assets/carinha.svg" alt="Aceno com a mao" class="happy" />
+  <div class="two-btns">
+    <button class="btn-esc" routerLink="/login">Entar</button>
+    <button class="btn-esc create" routerLink="/register">Criar conta</button>
+  </div>
+</div>
+
+<div *ngIf="!isOnLoginOrRegisterPage()" class="top-log">
+  <button class="exit" (click)="exit()">Sair</button>
+  <div class="alterns">
+    <button
+      [ngClass]="{ checked: clicado, dischecked: !clicado }"
+      (click)="setState(true)"
+    >
+      <img [src]="pathFish" alt="peixe" />
+      Meus Sistemas
+    </button>
+    <button
+      [ngClass]="{ checked: !clicado, dischecked: clicado }"
+      (click)="setState(false)"
+    >
+      <img [src]="pathProf" alt="perfil" />
+      Meu Perfil
+    </button>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  /*------Colors Styles-------------*/
+  --primary-color: #2DCC5F;
+  --secondary-color: #56986B;
+  --red: #DB2418;
+  --primary-color-dif: #45f87e;
+  --secondary-color-dif: #5dd382;
+  /*----------Blacks----------------*/
+  --bluish: #010020;
+  --white: #F6FFF9;
+  --grey: #585763;
+
+  /*---------Fontes----------*/
+  --principal-font: "Josefin Sans", sans-serif;
+  --second-font: "JetBrains Mono", monospace;
+
+}
+
+
+h1, h2, h3{
+  font-family: var(--principal-font);
+  color: var(--bluish);
+}
+
+button{
+  border: none;
+  // box-shadow: 0 4px 4px 0 #00000025;
+  background-color: transparent;
+  transition: 0.3s ease;
+
+  &:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+  }
+}
+
+label{
+  font-family: var(--second-font);
+  margin-bottom: .25rem;
+}
+
+input{
+  box-sizing: border-box;
+  height: 2.5rem;
+  border-radius: .5rem;
+  border: 1px solid #00000035;
+  font-size: 1.5rem;
+  font-family: var(--second-font);
+  outline: none;
+  padding-left: .25rem;
+}
+
+input:focus-visible{
+  border: solid 1px var(--secondary-color-dif);
+}
+
+p{
+  font-family: var(--principal-font);
+}
+
+
+
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #F6FFF9;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #D1DADC;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #D1DADC;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #585763;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #7A798A;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #393940;
+}

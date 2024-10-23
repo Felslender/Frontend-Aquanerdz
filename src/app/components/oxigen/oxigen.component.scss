@@ -1,0 +1,39 @@
+.card-meds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  width: 62vw;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 6px 6px 2px #00000037;
+
+  .nome-med {
+    width: 100%;
+    font-family: var(--principal-font);
+    font-size: 4vh;
+    margin: 1% 0 0 1%;
+    font-weight: 400;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50vh;
+    width: 60vw;
+
+    .gauge{
+      width: 30vw;
+
+      .odometro {
+        width: 80%;
+      }
+    }
+
+    .bar{
+      width: 30vw;
+    }
+  }
+}
+

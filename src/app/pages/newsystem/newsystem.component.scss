@@ -1,0 +1,181 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--white);
+  height: 89.75vh;
+  width: 100vw;
+
+  .cadastre {
+    width: 95vw;
+    text-align: left;
+    font-family: var(--principal-font);
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--bluish);
+  }
+
+  .abaixo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    width: 95vw;
+
+    .interacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 37vw;
+      height: 70vh;
+
+      .inserts {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        width: 28vw;
+
+        .invalid {
+          color: #ff0000;
+          margin-top: 2px;
+        }
+
+        .is-invalid {
+          border: solid 1px #ff0000;
+        }
+
+        .custom-select {
+          position: relative;
+        }
+
+        .custom-select select {
+          appearance: none;
+          -webkit-appearance: none;
+          width: 100%;
+          font-size: 1.5rem;
+          font-style: italic;
+          padding: 5px 10px 5px 10px;
+          background-color: #ffffff;
+          border: none;
+          border-radius: 0.5rem;
+          color: #000000;
+          cursor: pointer;
+          outline: none;
+          font-family: var(--second-font);
+
+          &:focus {
+            background: #f5f5f5;
+            border: 0px solid #5a7ec7;
+            border-radius: 8px;
+          }
+        }
+
+        .custom-select::after {
+          content: "";
+          position: absolute;
+          pointer-events: none;
+          top: 50%;
+          right: 17px;
+          transform: translate(0, -50%);
+          width: 14px;
+          height: 14px;
+          background-color: #000000;
+          clip-path: polygon(50% 80%, 0 20%, 100% 20%);
+        }
+      }
+
+      .envio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0;
+        margin-top: 7vh;
+        border-radius: 0.5rem;
+        background-color: var(--primary-color);
+        box-shadow: 6px 6px 2px 0 #00000037;
+        font-family: var(--principal-font);
+        font-size: 3.5vh;
+        color: var(--white);
+        transition: 0.4s ease;
+
+        &:hover {
+          transform: scale(0.98);
+        }
+      }
+
+      .cancela {
+        background-color: var(--red);
+      }
+    }
+
+    .engrenagens {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 70vh;
+      width: 45vw;
+    }
+
+    .gear-container {
+      margin-left: 4vw;
+      position: relative;
+      width: 30vw;
+      height: 45vh;
+    }
+
+    .gear {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+    }
+
+    .gear1 {
+      left: -8%;
+      height: 27vh;
+      width: 20vw;
+      animation: spin 5s linear infinite;
+    }
+
+    .gear2 {
+      top: 40%;
+      left: 31%;
+      height: 17vh;
+      width: 15vw;
+      animation: spin 4s linear infinite reverse;
+    }
+
+    .gear3 {
+      top: 66%;
+      left: 22%;
+      height: 14vh;
+      width: 7vw;
+      animation: spin 3s linear infinite;
+    }
+
+    .gear4 {
+      top: 84%;
+      left: 31%;
+      height: 8vh;
+      width: 13vw;
+      animation: spin 2s linear infinite reverse;
+    }
+
+    .gear5 {
+      top: 99%;
+      left: 38%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

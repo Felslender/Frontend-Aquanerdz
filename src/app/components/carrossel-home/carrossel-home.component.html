@@ -1,0 +1,54 @@
+<div class="carousel">
+  <ng-container *ngFor="let slide of slides; let i = index">
+    <div class="carousel-item" [ngClass]="{'active': currentIndex === i}">
+      <ng-container *ngComponentOutlet="slide"></ng-container>
+    </div>
+  </ng-container>
+</div>
+
+<div class="carousel-controls">
+  <button [ngClass]="{'checked1': currentIndex === 0}" class="sets" (click)="setSlide(0)">&bull;</button>
+  <button [ngClass]="{'checked1': currentIndex === 1}" class="sets" (click)="setSlide(1)">&bull;</button>
+  <button [ngClass]="{'checked1': currentIndex === 2}" class="sets" (click)="setSlide(2)">&bull;</button>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="container-slide" >
+  <div class="picture"></div>
+  <div class="txts">
+    <h2 class="equipe">Uma equipe de confiança e muito bom humor.</h2>
+    <p class="junte">
+      Junte-se conosco, não perca tempo. Foram feitos estudos e testes para
+      adequar o projeto para uma melhor experiência para você !
+    </p>
+  </div>
+</div>
+
+<div class="container-slide">
+  <div class="txts-find">
+    <h2 class="equipe">Procurando facilidade ?</h2>
+    <p class="junte">
+      Não precisa mais ficar horas e horas trabalhando muito para pouco
+      resultado, conosco você gerencia seus sistemas á distância Os cuidados que
+      serão necessários, serão baixíssimos
+    </p>
+  </div>
+  <div class="picture-find"></div>
+</div>
+
+<div class="container-slide">
+  <div class="picture"></div>
+  <div class="txts">
+    <h2 class="equipe">Um pouco sobre nossa trajetória.</h2>
+    <p class="junte">
+      Este vídeo mostra como começamos, nosso primeiro projeto, primeira
+      idealização, onde tudo começou a se formar.
+    </p>
+  </div>
+</div> -->

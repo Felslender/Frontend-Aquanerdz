@@ -1,0 +1,164 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  background-color: var(--white);
+  height: 89.75vh;
+  width: 100vw;
+
+  .ttl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+
+    .system-name {
+      margin-left: 2vw;
+      font-size: 4.5vh;
+      font-weight: 400;
+    }
+
+    .back {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5%;
+      margin-right: 2vw;
+      font-family: var(--principal-font);
+      font-size: 2.5vh;
+    }
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76vh;
+    width: 100vw;
+    margin-top: 4vh;
+
+    .infos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      width: 21vw;
+
+      .alimentacao {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40%;
+        width: 90%;
+        margin-top: 2vh; //adxadwdfewifgbefg
+
+        .card-alim {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          height: 25vh;
+          width: 100%;
+          border-radius: 0.5rem;
+          background-color: #ffffff;
+          box-shadow: 6px 6px 2px 0 #00000037;
+
+          .hours {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 1vh;
+
+            .realizada {
+              font-family: var(--second-font);
+              color: var(--grey);
+              font-size: 2.75vh;
+            }
+
+            .hr {
+              font-family: var(--principal-font);
+              font-size: 4vh;
+              margin: 6% 0;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .top-card-fishes {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .editar {
+            transition: 0.3s ease;
+          }
+
+          .editar:hover {
+            cursor: pointer;
+            transform: scale(1.3);
+          }
+        }
+      }
+
+      .title-card {
+        font-size: 2.75vh;
+      }
+
+      .fishes {
+        margin-bottom: 4vh;
+      }
+    }
+
+    .meds {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      width: 62vw;
+
+      .title-card-ox {
+        width: 100%;
+        margin-top: 2vh;
+        text-align: left;
+        font-size: 2.75vh;
+      }
+
+      .options-ox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 15vw;
+        margin-bottom: 2vh;
+
+        .select {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0.5rem;
+          height: 4vh;
+          width: 5vw;
+          background-color: #ffffff;
+          box-shadow: 0 4px 4px 0 #00000025;
+        }
+      }
+    }
+
+    .slogan{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      height: 100%;
+
+      .simbolo-an{
+        margin: 0 1.5vw 0 0;
+      }
+    }
+  }
+}

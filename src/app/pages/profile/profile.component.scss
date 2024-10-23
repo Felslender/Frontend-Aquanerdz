@@ -1,0 +1,80 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 89.75vh;
+  width: 100vw;
+  background-color: var(--white);
+  background-image: url("../../../assets/gree-trian-profile.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 17vh;
+
+  .title {
+    font-family: var(--principal-font);
+    font-size: 40px;
+    font-weight: 400;
+    margin: 5vh 0 0 2vw;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25vh;
+    width: 28vw;
+    padding: 2vh 0 2vh 1vw;
+    margin: 0 0 42vh 2vw;
+    box-shadow: 6px 6px 2px 0 #00000037;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    transition: 0.4s ease;
+
+    .title-vector {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .edit-pen{
+        margin: 0 .25vw 0 0;
+      }
+    }
+
+    .infos {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .card-infos {
+        padding-bottom: 1.25vh;
+        font-family: var(--second-font);
+        color: var(--grey);
+        font-size: 2vh;
+      }
+
+      .card-title {
+        font-family: var(--principal-font);
+        color: #000000;
+        font-size: 3vh;
+        font-weight: 400;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(0.99);
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .content{
+    .card {
+      width: max-content;
+    }
+  }
+}

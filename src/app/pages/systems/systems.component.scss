@@ -1,0 +1,111 @@
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  background-color: var(--white);
+  height: 89.75vh;
+  width: 100vw;
+
+  .stm{
+    width: calc(100% - 7vw);
+    text-align: left;
+    font-size: 6vh;
+    font-weight: 400;
+    margin-top: 5vh;
+  }
+
+  .center{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70vh;
+    width: 100vw;
+    gap: 24vw;
+
+    .left{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: 100%;
+      width: 25vw;
+      overflow-y: scroll;
+
+      .card{
+        display: flex;
+        flex-direction: column;
+        height: 22vh;
+        width: calc(80% - 1vw);
+        padding-left: 1vw;
+        padding-top: 1vh ;
+        margin-top: 3vh;
+        box-shadow: 6px 6px 2px 0 #00000037;
+        border-radius: 1rem;
+        background-color: #ffffff;
+        transition: .4s ease;
+
+        .title-vector{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .card-title{
+            font-family: var(--principal-font);
+            color: #000000;
+            font-size: 4vh;
+            font-weight: 400;
+          }
+        }
+
+        .card-infos{
+          padding-bottom: 1.25vh;
+          font-family: var(--second-font);
+          color: var(--grey);
+          font-size: 2vh;
+        }
+
+        &:hover{
+          cursor: pointer;
+          transform: scale(.95);
+        }
+      }
+    }
+
+    .right{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 40vw;
+
+      .sobre{
+        z-index: 11;
+        margin-right: 33vw;
+      }
+
+      .crie{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 10;
+        height: 15.75vh;
+        width: 25vw;
+        border-radius: 1rem 0 1rem 0;
+        font-family: var(--second-font);
+        font-size: 1.75rem;
+        font-weight: 500;
+        background-color: #ffffff;
+        box-shadow: 6px 6px 2px 0 #00000037;
+        transition: .4s ease;
+
+        &:hover{
+          cursor: pointer;
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+<div class="content">
+  <div class="right">
+    <div class="back">
+      <div class="conj-vlt" routerLink="/landing">
+        <img
+          class="vetor-back"
+          src="../../../assets/corner-down-left.svg"
+          alt="botao voltar"
+        />
+        <p class="txt-back">Voltar</p>
+      </div>
+    </div>
+    <div class="center">
+      <div class="contents-center">
+        <h2 class="title">Boas Vindas</h2>
+        <form (ngSubmit)="submitCad()" [formGroup]="form" #formDir="ngForm">
+          <div class="inserts">
+            <label>Nome</label>
+            <input
+              type="text"
+              placeholder="Nome completo"
+              formControlName="nome"
+              required
+            />
+          </div>
+          <div class="inserts">
+            <label>E-mail</label>
+            <input
+              type="text"
+              placeholder="example@exam.com"
+              formControlName="email"
+              required
+              [ngClass]="{
+                'is-invalid':
+                  form.get('email')?.['invalid'] &&
+                  (form.get('email')?.touched || formDir.submitted)
+              }"
+            />
+            <div
+              *ngIf="email.invalid && (email.touched || formDir.submitted)"
+              class="invalid"
+            >
+              <p>Email inválido</p>
+            </div>
+          </div>
+          <div formGroupName="matching_passwords" class="inserts">
+            <label>Senha</label>
+            <input
+              type="password"
+              placeholder="Insira sua senha"
+              formControlName="senha"
+              [ngClass]="{
+                'is-invalid':
+                form.get('senha')?.['invalid'] &&
+                (form.get('senha')?.touched || formDir.submitted)
+              }"
+              required
+            />
+            <div
+              *ngIf="senha.invalid && (senha.touched || formDir.submitted)"
+              class="invalid"
+            >
+              <p *ngIf="senha.errors?.['required']">Senha é obrigatória</p>
+              <p *ngIf="senha.errors?.['minlength']">
+                A senha deve ter no mínimo 5 caracteres
+              </p>
+            </div>
+          </div>
+          <div formGroupName="matching_passwords" class="inserts">
+            <label>Confirmar senha</label>
+            <input
+              type="password"
+              placeholder="Repita a senha"
+              formControlName="confSenha"
+              required
+            />
+            <div
+              *ngIf="form.get('matching_passwords')?.errors?.['areEqual'] && (confSenha.touched || formDir.submitted)"
+              class="invalid"
+            >
+              <p>As senhas precisam ser iguais</p>
+            </div>
+          </div>
+          <div class="inserts">
+            <label>Numero de telefone/celular</label>
+            <div class="ins-cell">
+              <input
+                class="ddd"
+                type="text"
+                placeholder="DDD"
+                formControlName="ddd"
+                required
+                mask="(00)"
+              />
+              <input
+                class="cell"
+                type="text"
+                placeholder="9 99123 2600"
+                formControlName="cell"
+                required
+                mask="0 0000 - 0000"
+              />
+            </div>
+          </div>
+          <button class="entry" type="submit" [disabled]="form.invalid">
+            Entrar
+          </button>
+          <div *ngIf="form.invalid && formDir.submitted " class="invalid-geral">
+            <p class="parag">Preencha os campos corretamento</p>
+          </div>
+        </form>
+        <!-- <p class="forgot">Esqueci minha senha</p> -->
+        <span class="contact">Entre em contato conosco (14)99xxxxxxxx</span>
+      </div>
+    </div>
+    <div class="man">
+      <img src="../../../assets/carinha-login.svg" alt="Homem feliz" />
+    </div>
+  </div>
+  <div class="left"></div>
+</div>

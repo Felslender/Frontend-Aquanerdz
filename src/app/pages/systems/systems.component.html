@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="content">
+  <h2 class="stm">Sistemas</h2>
+  <div class="center">
+    <div class="left">
+      <div class="card" *ngFor="let sistema of listaSystems" (click)="detalharSistema(sistema.id_sistema)">
+        <div class="title-vector">
+          <h5 class="card-title">{{sistema.nome_sistema}}</h5>
+          <img src="../../../assets/info-circle.svg" alt="Mais infos" />
+        </div>
+        <!-- <p class="card-infos">Funcionando por 2 meses e 3 dias</p> -->
+        <p class="card-infos">O2 80%</p>
+        <p class="card-infos">25 °C</p>
+        <p class="card-infos">Alimentação há 2 horas</p>
+      </div>
+    </div>
+    <div class="right">
+      <img
+        class="sobre"
+        src="../../../assets/carinha-newstm.svg"
+        alt="crie seu system"
+      />
+      <div class="crie" routerLink="/newsystem">
+        <img src="../../../assets/plus-circle.svg" alt="Adicionar systema" />
+        Novo Sistema
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.content-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 45vh;
+  width: 30vw;
+
+  .odometro {
+    width: 80%;
+  }
+}

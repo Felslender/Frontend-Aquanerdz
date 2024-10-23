@@ -1,0 +1,121 @@
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .left{
+    height: 100vh;
+    width: 12vw;
+    background-image: url("../../../assets/trians-white.svg");
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-color: var(--secondary-color);
+  }
+
+  .right{
+    display: flex;
+    justify-content: space-between;
+    width: 88vw;
+    height: 100vh;
+    background-color: var(--white);
+
+    .back{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      .conj-vlt{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 7vw;
+        padding: .5rem 0 0 .5rem;
+        transition: 0.3s ease;
+
+        .txt-back{
+          font-size: 2.5vh;
+          font-weight: 600;
+        }
+      }
+
+      .conj-vlt:hover{
+        cursor: pointer;
+      }
+
+      .conj-vlt:active{
+        transform: scale(1.05);
+      }
+    }
+
+    .center{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+      .contents-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 7vh;
+
+        .title{
+          font-size: 5vh;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        .inserts{
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1rem;
+
+          .invalid{
+            color: #ff0000;
+          }
+
+          .is-invalid{
+            border: solid 1px #ff0000;
+          }
+
+          .ins-cell{
+            display: flex;
+            justify-content: space-between;
+
+            .ddd{
+              width: 20%;
+            }
+
+            .cell{
+              width: 75%;
+            }
+          }
+        }
+
+        .entry{
+          width: -webkit-fill-available;
+          padding: .5rem 0;
+          border-radius: .5rem;
+          background-color: var(--primary-color);
+          box-shadow: 3px 4px 4px 0 #00000025;
+          font-family: var(--principal-font);
+          color: var(--white);
+          font-size: 3.5vh;
+        }
+
+        .invalid-geral{
+          display: flex;
+          .parag{
+            text-align: center;
+            color: #ff0000;
+          }
+        }
+
+        .contact{
+          font-family: var(--second-font);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
